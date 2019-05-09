@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jiatui.plugin</groupId>
-  <artifactId>swagger2-generator</artifactId>
+  <artifactId>litlak-plugin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>swagger2-generator</name>
+  <name>litlak-plugin</name>
   <description>mybatis-generator-plugin for swagger2 annotation</description>
 
   <properties>
