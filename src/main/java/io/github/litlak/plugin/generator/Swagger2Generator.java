@@ -1,4 +1,4 @@
-package com.litlak.plugin.generator;
+package io.github.litlak.plugin.generator;
 
 import java.util.Collection;
 import java.util.List;

@@ -27,6 +27,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.0</version>
         <configuration>
           <skip>true</skip>
         </configuration>
@@ -35,6 +36,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
+        <version>3.0.1</version>
         <configuration>
           <attach>true</attach>
         </configuration>
@@ -58,19 +60,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <distributionManagement>
-    <repository>
-      <id>central</id>
-      <name>Central Repository</name>
-      <url>http://repo.maven.apache.org/maven2</url>
-      <layout>default</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <!-- <repository> <id>central</id> <name>releases</name> <url>http://central.maven.org/maven2/nexus/content/repositories/releases</url> 
-      <uniqueVersion>true</uniqueVersion> </repository> <snapshotRepository> <id>nexus</id> <name>snapshots</name> <url>http://central.maven.org/maven2/content/repositories/snapshots</url> 
-      </snapshotRepository> -->
-  </distributionManagement>
 </project>
