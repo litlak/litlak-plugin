@@ -1,4 +1,4 @@
-package com.jiatui.plugin.generator;
+package com.litlak.plugin.generator;
 
 import java.util.Collection;
 import java.util.List;
