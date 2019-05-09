@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.jiatui.plugin</groupId>
+  <groupId>com.litlak</groupId>
   <artifactId>litlak-plugin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>litlak-plugin</name>
@@ -59,45 +59,18 @@
     </plugins>
   </build>
 
-  <!-- 私服仓库设置 -->
-  <repositories>
-    <repository>
-      <id>jiatui-releases</id>
-      <name>Jiatui Releases</name>
-      <url>https://arch-maven.test.jiatuiyun.net/content/repositories/releases/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>jiatui-snapshots</id>
-      <name>Jiatui Snapshots</name>
-      <url>https://arch-maven.test.jiatuiyun.net/content/repositories/snapshots/</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <!-- 向私服仓库拉取代码的频率 -->
-        <!-- <updatePolicy>always</updatePolicy> -->
-      </snapshots>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>jiatui</id>
-      <name>jiatui center reposiotry</name>
-      <url>https://arch-maven.test.jiatuiyun.net/content/groups/public/</url>
-    </pluginRepository>
-  </pluginRepositories>
   <distributionManagement>
     <repository>
-      <id>releases</id>
-      <name>Jiatui Releases</name>
-      <url>https://arch-maven.test.jiatuiyun.net/content/repositories/releases/</url>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
     </repository>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <name>Jiatui Snapshot</name>
-      <url>https://arch-maven.test.jiatuiyun.net/content/repositories/snapshots/</url>
-    </snapshotRepository>
+    <!-- <repository> <id>central</id> <name>releases</name> <url>http://central.maven.org/maven2/nexus/content/repositories/releases</url> 
+      <uniqueVersion>true</uniqueVersion> </repository> <snapshotRepository> <id>nexus</id> <name>snapshots</name> <url>http://central.maven.org/maven2/content/repositories/snapshots</url> 
+      </snapshotRepository> -->
   </distributionManagement>
 </project>
