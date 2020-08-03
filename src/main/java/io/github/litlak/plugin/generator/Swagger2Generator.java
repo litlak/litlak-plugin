@@ -58,11 +58,15 @@ public class Swagger2Generator extends PluginAdapter {
 		StringBuilder sb = new StringBuilder("@ApiModelProperty(");
 
 		sb.append("value = \"" + introspectedColumn.getRemarks() + "\"");// 名字
-		sb.append(", ");
-		sb.append("required = " + !introspectedColumn.isNullable() + "");// 是否必选
-		if (introspectedColumn.getDefaultValue() != null) {
+		if (introspectedColumn.getJdbcTypeName() == JDBCType.TIMESTAMP.getName()) {
 			sb.append(", ");
-			sb.append("example = \"" + introspectedColumn.getDefaultValue() + "\"");// 默认值
+			sb.append("example = \""
+					+ new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()) + "\"");// 默认值
+		} else {
+			if (introspectedColumn.getDefaultValue() != null) {
+				sb.append(", ");
+				sb.append("example = \"" + introspectedColumn.getDefaultValue() + "\"");// 默认值
+			}
 		}
 
 		sb.append(')');
